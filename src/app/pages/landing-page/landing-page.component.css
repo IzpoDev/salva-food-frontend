@@ -1,0 +1,536 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;      
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: #2C7865;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #2C7865;
+        }
+
+        /* Hero Section */
+      .hero {
+            background-image: url('../../../assets/fondo1.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: none
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+            color: white
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: white
+        }
+
+        .hero p {
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            color: white;
+        }
+
+        .cta-button {
+            background: #2C7865;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 5rem 2rem;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .expiry-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #dc2626;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-coca {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-ritz {
+            background: linear-gradient(45deg, #dc2626, #f97316);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-chocolate {
+            background: linear-gradient(45deg, #78716c, #a3a3a3);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-oreo {
+            background: linear-gradient(45deg, #1e40af, #3b82f6);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #6b7280;
+            font-size: 1rem;
+        }
+
+        .sale-price {
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .discount-percent {
+            background: #2C7865;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        /* How It Works Section */
+.how-it-works {
+    background-color: #2C7865; /* Fondo verde */
+    color: #F8F8F8; /* Texto blanco */
+    padding: 4rem 2rem;
+    height: 70vh;
+}
+
+.how-it-works .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how-it-works .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #F8F8F8; /* Blanco */
+}
+
+.how-it-works .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #F8F8F8; /* Blanco */
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.step-card {
+    background-color: #F8F8F8; /* Fondo blanco */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2C7865; /* Verde */
+}
+
+.step-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #0A0F2C; /* Azul oscuro */
+}
+
+.step-card p {
+    font-size: 1rem;
+    color: #000000; /* Negro */
+    margin-bottom: 1rem;
+}
+
+.step-number {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #2C7865; /* Verde */
+    background-color: #F8F8F8; /* Blanco */
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+/* Benefits Section */
+.benefits-section {
+    background-color: #F8F8F8; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    padding: 4rem 2rem;
+    min-height: 60vh; /* Ocupa el 80% de la vista */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.benefits-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #0A0F2C; /* Azul oscuro */
+}
+
+.benefits-section .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #0A0F2C; /* Azul oscuro */
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2C7865; /* Verde */
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0A0F2C; /* Azul oscuro */
+}
+
+/* Subscription Section */
+.subscription-section {
+    background-color: #2C7865; /* Fondo verde */
+    color: #F8F8F8; /* Texto blanco */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.subscription-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subscription-section .section-title {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.subscription-section .section-description {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subscription-input {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 60%;
+}
+
+.subscription-button {
+    background-color: #000000; /* Botón negro */
+    color: #F8F8F8; /* Texto blanco */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-button:hover {
+    background-color: #0A0F2C; /* Azul oscuro */
+}
+
+/* Social Media Section */
+.social-media-section {
+    background-color: #F8F8F8; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.social-media-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-media-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    color: #2C7865; /* Verde */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0A0F2C; /* Azul oscuro */
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .product-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; }
