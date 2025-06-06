@@ -59,3 +59,5 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 # SalvaFood: StartUp sobre una Plataforma de rescate de alimentos cercanos a su fecha de vencimiento
+
+SalvaFood es una solución digital enfocada en reducir la merma y el desperdicio de alimentos en buen estado, promoviendo la economía circular. A través de una plataforma web, permite a bodegas y negocios minoristas ofrecer productos cercanos a su fecha de vencimiento a precios reducidos, incentivando su adquisición por parte de usuarios conscientes, mediante un sistema de recompensas por productos salvados.
