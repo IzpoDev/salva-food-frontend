@@ -117,4 +117,5 @@ export class LandingPageComponent implements OnInit {
     if (name.includes('OREO')) return 'OREO';
     return name.toUpperCase();
   }
+
 }

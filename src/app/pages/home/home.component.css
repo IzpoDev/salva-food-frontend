@@ -1,0 +1,109 @@
+/*filepath: c:\Users\Fabricio\Documents\Angular\landing_salvafood_customerDev\salvaFood\src\app\pages\home\home.component.css*/
+.bg-color-verde-sf {
+  background-color: #2C7865;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  border-color: #2C7865;
+}
+
+/* Usa las mismas clases de imágenes que tienes en tu landing */
+.cocacola {
+  background-image: url('../../assets/CocaCola.png');
+}
+
+.fanta {
+  background-image: url('../../assets/fanta-naranja-2.png');
+}
+
+.yog{
+  background-image: url('../../assets/yog.png');
+}
+
+.pan {
+  background-image: url('../../assets/pan.png');
+}
+/* ...existing code... */
+
+/* Estilos para la barra de búsqueda */
+.search-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  z-index: 100;
+  width: 0;
+}
+
+.search-bar.expanded {
+  width: 300px;
+}
+
+.search-bar input {
+  width: 100%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.search-bar.expanded input {
+  opacity: 1;
+}
+
+/* Estilo de las categorías de búsqueda */
+.search-categories {
+  transition: all 0.2s ease;
+  z-index: 101;
+}
+
+/* Animación para el toggle de búsqueda */
+.search-toggle {
+  transition: all 0.3s ease;
+  /* Asegurarnos que permanezca visible */
+  visibility: visible !important; 
+}
+
+.search-toggle:hover, .search-toggle.active {
+  color: #2C7865;
+}
+
+/* Estilo del overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.search-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .search-bar.expanded {
+    width: 250px;
+  }
+}
