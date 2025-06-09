@@ -34,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 25em;
+  padding: 0 25em;
   box-shadow: 0 2px 8px rgba(44, 120, 101, 0.15);
   border-bottom: 2px solid #2C7865;
   position: sticky;
