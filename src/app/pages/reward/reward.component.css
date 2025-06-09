@@ -30,7 +30,6 @@
 /* Main Navigation - Navbar más largo, centrado y letras negras */
 .main-nav {
   background: white;
-  padding: 24px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
