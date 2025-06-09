@@ -27,47 +27,44 @@
   width: 100%;
 }
 
-/* Main Navigation - Navbar más largo, centrado y letras negras */
+/* Main Navigation - Reducir paddings */
 .main-nav {
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25em;
+  padding: 1rem 2rem; /* Reducido significativamente */
   box-shadow: 0 2px 8px rgba(44, 120, 101, 0.15);
   border-bottom: 2px solid #2C7865;
   position: sticky;
   top: 0;
   z-index: 50;
-  min-height: 80px;
+  min-height: 70px; /* Reducido de 80px */
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 20px;
-  /* Removí los paddings que agregaste */
+  gap: 15px; /* Reducido */
 }
 
 .brand-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 10px; /* Reducido */
 }
 
-/* Botón toggle oculto por defecto - solo visible en móvil */
 .menu-btn {
   background: none;
   border: 2px solid #2C7865;
   color: #2C7865;
-  font-size: 18px;
+  font-size: 16px; /* Reducido */
   cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 8px;
+  padding: 8px 12px; /* Reducido */
+  border-radius: 6px;
   transition: all 0.3s ease;
   font-weight: bold;
-  display: none; /* Oculto por defecto */
+  display: none;
 }
 
 .menu-btn:hover {
@@ -78,7 +75,7 @@
 }
 
 .brand {
-  font-size: 32px;
+  font-size: 28px; /* Reducido de 32px */
   font-weight: 700;
   margin: 0;
   text-shadow: 1px 1px 2px rgba(44, 120, 101, 0.1);
@@ -86,7 +83,7 @@
 
 .nav-center {
   display: flex;
-  gap: 40px;
+  gap: 30px; /* Reducido de 40px */
   align-items: center;
   justify-content: center;
   flex: 1;
@@ -95,11 +92,11 @@
 .nav-link {
   text-decoration: none;
   color: #333;
-  padding: 16px 24px;
+  padding: 12px 20px; /* Reducido */
   border-bottom: 3px solid transparent;
   transition: all 0.3s ease;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px; /* Reducido de 18px */
   border-radius: 8px 8px 0 0;
   text-align: center;
 }
@@ -118,15 +115,13 @@
 .nav-right {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  /* Removí el padding-right que agregaste */
+  gap: 15px; /* Reducido */
 }
 
 .user-id {
   color: #333;
   font-weight: 600;
-  font-size: 1.7em;
+  font-size: 1.4em; /* Reducido */
 }
 
 .profile-btn {
@@ -134,11 +129,11 @@
   color: white;
   border: none;
   border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.2em; /* Reducido */
+  height: 2.2em; /* Reducido */
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 2em;
+  font-size: 1.8em; /* Reducido */
   box-shadow: 0 4px 12px rgba(44, 120, 101, 0.3);
 }
 
@@ -147,32 +142,32 @@
   box-shadow: 0 6px 16px rgba(44, 120, 101, 0.4);
 }
 
-/* Main Content */
+/* Main Content - Reducir paddings */
 .main-content {
-  padding: 40px 32px;
+  padding: 30px 20px; /* Reducido significativamente */
 }
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 320px 1fr 320px;
-  gap: 40px;
-  max-width: 1400px;
+  grid-template-columns: 300px 1fr 300px; /* Reducido */
+  gap: 30px; /* Reducido */
+  max-width: 1200px; /* Reducido */
   margin: 0 auto;
 }
 
-/* Left Panel */
+/* Left Panel - Reducir paddings */
 .left-panel {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: 12px; /* Reducido */
+  padding: 24px; /* Reducido */
   box-shadow: 0 8px 24px rgba(44, 120, 101, 0.12);
   border: 2px solid rgba(44, 120, 101, 0.1);
   height: fit-content;
 }
 
 .section-title {
-  margin: 0 0 32px 0;
-  font-size: 28px;
+  margin: 0 0 24px 0; /* Reducido */
+  font-size: 24px; /* Reducido */
   font-weight: 700;
   color: #2C7865;
   text-align: center;
@@ -181,15 +176,15 @@
 
 .user-profile {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px; /* Reducido */
 }
 
 .profile-avatar {
-  width: 140px;
-  height: 140px;
+  width: 120px; /* Reducido */
+  height: 120px; /* Reducido */
   border: 3px solid #2C7865;
-  border-radius: 16px;
-  margin: 0 auto 24px;
+  border-radius: 12px;
+  margin: 0 auto 20px; /* Reducido */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,8 +199,8 @@
 }
 
 .avatar-icon {
-  width: 70px;
-  height: 70px;
+  width: 60px; /* Reducido */
+  height: 60px; /* Reducido */
   opacity: 0.8;
 }
 
@@ -214,12 +209,12 @@
 }
 
 .user-info p {
-  margin: 16px 0;
+  margin: 12px 0; /* Reducido */
   color: #555;
-  font-size: 15px;
+  font-size: 14px; /* Reducido */
   line-height: 1.6;
-  padding: 12px 16px;
-  border-radius: 8px;
+  padding: 10px 14px; /* Reducido */
+  border-radius: 6px;
   background: rgba(44, 120, 101, 0.02);
   border-left: 3px solid #2C7865;
 }
@@ -232,18 +227,18 @@
 .points {
   color: #2C7865;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px; /* Reducido */
   background: linear-gradient(135deg, #2C7865, #3a9b7a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Center Panel */
+/* Center Panel - Reducir paddings */
 .center-panel {
   background: white;
-  border-radius: 16px;
-  padding: 40px;
+  border-radius: 12px;
+  padding: 30px; /* Reducido */
   box-shadow: 0 8px 24px rgba(44, 120, 101, 0.12);
   border: 2px solid rgba(44, 120, 101, 0.1);
   display: flex;
@@ -253,16 +248,16 @@
 
 .reward-card {
   border: 3px solid rgba(44, 120, 101, 0.2);
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: 12px;
+  padding: 24px; /* Reducido */
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px; /* Reducido */
   cursor: pointer;
   transition: all 0.4s ease;
   background: linear-gradient(135deg, white, rgba(44, 120, 101, 0.02));
   width: 100%;
-  max-width: 450px;
+  max-width: 400px; /* Reducido */
   position: relative;
   overflow: hidden;
 }
@@ -289,10 +284,10 @@
 }
 
 .card-icon {
-  width: 90px;
-  height: 90px;
+  width: 80px; /* Reducido */
+  height: 80px; /* Reducido */
   border: 2px solid #2C7865;
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,8 +301,8 @@
 }
 
 .card-icon svg {
-  width: 45px;
-  height: 45px;
+  width: 40px; /* Reducido */
+  height: 40px; /* Reducido */
 }
 
 .card-content {
@@ -316,15 +311,15 @@
 
 .card-title {
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0; /* Reducido */
   color: #2C7865;
-  font-size: 18px;
+  font-size: 16px; /* Reducido */
 }
 
 .card-description {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0; /* Reducido */
   color: #666;
-  font-size: 15px;
+  font-size: 14px; /* Reducido */
   font-weight: 500;
 }
 
@@ -332,15 +327,15 @@
   margin: 0;
   color: #2C7865;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px; /* Reducido */
 }
 
 .add-btn {
   background: white;
   border: 3px solid #2C7865;
-  border-radius: 12px;
-  width: 48px;
-  height: 48px;
+  border-radius: 10px;
+  width: 44px; /* Reducido */
+  height: 44px; /* Reducido */
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -351,8 +346,8 @@
 }
 
 .add-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 22px; /* Reducido */
+  height: 22px; /* Reducido */
 }
 
 .add-btn:hover, .add-btn.active {
@@ -362,11 +357,11 @@
   box-shadow: 0 4px 12px rgba(44, 120, 101, 0.4);
 }
 
-/* Right Panel */
+/* Right Panel - Reducir paddings */
 .right-panel {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: 12px;
+  padding: 24px; /* Reducido */
   box-shadow: 0 8px 24px rgba(44, 120, 101, 0.12);
   border: 2px solid rgba(44, 120, 101, 0.1);
   height: fit-content;
@@ -386,20 +381,20 @@
 .cart-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 20px;
+  gap: 14px; /* Reducido */
+  padding: 16px; /* Reducido */
   border: 2px solid rgba(44, 120, 101, 0.2);
-  border-radius: 12px;
-  margin-bottom: 24px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Reducido */
   position: relative;
   background: linear-gradient(135deg, rgba(44, 120, 101, 0.02), rgba(44, 120, 101, 0.05));
 }
 
 .cart-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px; /* Reducido */
+  height: 50px; /* Reducido */
   border: 2px solid #2C7865;
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,8 +404,8 @@
 }
 
 .cart-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 24px; /* Reducido */
+  height: 24px; /* Reducido */
 }
 
 .cart-details {
@@ -419,22 +414,22 @@
 
 .cart-title {
   font-weight: 700;
-  margin: 0 0 4px 0;
-  font-size: 15px;
+  margin: 0 0 3px 0; /* Reducido */
+  font-size: 14px; /* Reducido */
   color: #2C7865;
 }
 
 .cart-description {
-  margin: 0 0 4px 0;
+  margin: 0 0 3px 0; /* Reducido */
   color: #666;
-  font-size: 13px;
+  font-size: 12px; /* Reducido */
   font-weight: 500;
 }
 
 .cart-price {
   margin: 0;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px; /* Reducido */
   color: #2C7865;
 }
 
@@ -442,9 +437,9 @@
   background: linear-gradient(135deg, #2C7865, #3a9b7a);
   color: white;
   border: none;
-  border-radius: 8px;
-  width: 32px;
-  height: 32px;
+  border-radius: 6px;
+  width: 28px; /* Reducido */
+  height: 28px; /* Reducido */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -459,21 +454,21 @@
 }
 
 .cart-add-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 16px; /* Reducido */
+  height: 16px; /* Reducido */
 }
 
 .remove-btn {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 6px; /* Reducido */
   position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 18px;
+  top: 6px;
+  right: 6px;
+  font-size: 16px; /* Reducido */
   transition: all 0.3s ease;
-  border-radius: 6px;
+  border-radius: 4px;
   color: #dc3545;
 }
 
@@ -484,18 +479,18 @@
 
 .summary-details {
   border-top: 2px solid rgba(44, 120, 101, 0.1);
-  padding-top: 24px;
+  padding-top: 20px; /* Reducido */
 }
 
 .summary-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 12px; /* Reducido */
   color: #666;
-  font-size: 15px;
+  font-size: 14px; /* Reducido */
   font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 6px 10px; /* Reducido */
+  border-radius: 6px;
   background: rgba(44, 120, 101, 0.02);
 }
 
@@ -503,9 +498,9 @@
   font-weight: 700;
   color: #2C7865;
   border-top: 2px solid rgba(44, 120, 101, 0.2);
-  padding-top: 16px;
-  margin-top: 16px;
-  font-size: 18px;
+  padding-top: 12px; /* Reducido */
+  margin-top: 12px; /* Reducido */
+  font-size: 16px; /* Reducido */
   background: linear-gradient(135deg, rgba(44, 120, 101, 0.05), rgba(44, 120, 101, 0.1));
 }
 
@@ -514,12 +509,12 @@
   background: linear-gradient(135deg, #2C7865, #3a9b7a);
   color: white;
   border: none;
-  border-radius: 16px;
-  padding: 18px 24px;
-  font-size: 18px;
+  border-radius: 12px;
+  padding: 14px 20px; /* Reducido */
+  font-size: 16px; /* Reducido */
   font-weight: 700;
   cursor: pointer;
-  margin-top: 24px;
+  margin-top: 20px; /* Reducido */
   transition: all 0.4s ease;
   box-shadow: 0 4px 12px rgba(44, 120, 101, 0.3);
   text-transform: uppercase;
@@ -539,7 +534,7 @@
   box-shadow: none;
 }
 
-/* Modal Styles */
+/* Modal Styles - Mantener igual pero optimizar */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -563,9 +558,9 @@
 
 .modal-content {
   background: white;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 0;
-  max-width: 500px;
+  max-width: 450px; /* Reducido */
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
@@ -579,16 +574,16 @@
 }
 
 .modal-header {
-  padding: 32px 32px 16px;
+  padding: 24px 24px 12px; /* Reducido */
   text-align: center;
   position: relative;
   border-bottom: 1px solid #eee;
 }
 
 .success-icon {
-  margin: 0 auto 16px;
-  width: 80px;
-  height: 80px;
+  margin: 0 auto 12px; /* Reducido */
+  width: 70px; /* Reducido */
+  height: 70px; /* Reducido */
 }
 
 .success-icon svg {
@@ -598,7 +593,7 @@
 }
 
 .modal-title {
-  font-size: 28px;
+  font-size: 24px; /* Reducido */
   font-weight: 700;
   color: #2C7865;
   margin: 0;
@@ -606,15 +601,15 @@
 
 .modal-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 12px; /* Reducido */
+  right: 12px; /* Reducido */
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 28px; /* Reducido */
   color: #999;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 36px; /* Reducido */
+  height: 36px; /* Reducido */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -628,28 +623,28 @@
 }
 
 .modal-body {
-  padding: 24px 32px;
+  padding: 20px 24px; /* Reducido */
 }
 
 .modal-message {
-  font-size: 18px;
+  font-size: 16px; /* Reducido */
   color: #333;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px; /* Reducido */
   font-weight: 500;
 }
 
 .modal-details {
   background: #f8f9fa;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 16px; /* Reducido */
 }
 
 .detail-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12px;
-  padding: 8px 0;
+  margin-bottom: 10px; /* Reducido */
+  padding: 6px 0; /* Reducido */
   border-bottom: 1px solid #eee;
 }
 
@@ -669,21 +664,21 @@
 }
 
 .modal-footer {
-  padding: 16px 32px 32px;
+  padding: 12px 24px 24px; /* Reducido */
   display: flex;
-  gap: 16px;
+  gap: 12px; /* Reducido */
   justify-content: center;
 }
 
 .modal-btn {
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 10px 20px; /* Reducido */
+  border-radius: 10px;
+  font-size: 14px; /* Reducido */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
-  min-width: 120px;
+  min-width: 100px; /* Reducido */
 }
 
 .modal-btn.primary {
@@ -708,7 +703,7 @@
   color: white;
 }
 
-/* Animations */
+/* Animaciones - Mantener igual */
 @keyframes pulse {
   0% { 
     transform: scale(1); 
@@ -783,23 +778,22 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .content-wrapper {
-    grid-template-columns: 280px 1fr 280px;
-    gap: 24px;
+    grid-template-columns: 260px 1fr 260px;
+    gap: 20px;
   }
 }
 
-/* Tablet y pantallas medianas */
 @media (max-width: 992px) {
   .content-wrapper {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
   
   .main-nav {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     text-align: center;
-    padding: 20px 16px;
+    padding: 15px 12px;
   }
   
   .nav-center {
@@ -809,108 +803,93 @@
   }
   
   .nav-link {
-    font-size: 16px;
-    padding: 12px 20px;
+    font-size: 14px;
+    padding: 10px 16px;
   }
   
-  /* Mostrar el botón toggle en tablet */
   .menu-btn {
     display: block;
   }
 }
 
-/* Móvil */
 @media (max-width: 768px) {
   .main-content {
-    padding: 16px;
+    padding: 12px;
   }
   
   .left-panel, .center-panel, .right-panel {
-    padding: 20px;
+    padding: 16px;
   }
   
   .reward-card {
     flex-direction: column;
     text-align: center;
-    gap: 16px;
+    gap: 12px;
   }
   
   .cart-header {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
+    gap: 10px;
   }
   
   .brand {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .section-title {
-    font-size: 24px;
+    font-size: 20px;
   }
   
   .brand-container {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
   
   .modal-content {
     width: 95%;
-    margin: 20px;
+    margin: 15px;
   }
   
   .modal-header, .modal-body, .modal-footer {
-    padding: 20px;
+    padding: 16px;
   }
   
   .modal-footer {
     flex-direction: column;
   }
   
-  /* Asegurar que el botón toggle esté visible en móvil */
   .menu-btn {
     display: block;
   }
   
-  /* Remover los paddings extra en móvil */
-  .nav-left {
-    padding-left: 0;
-    margin-left: 0;
-  }
-  
-  .nav-right {
-    padding-right: 0;
-  }
-  
-  /* Ajustar tamaños de texto para móvil */
   .user-id {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   
   .profile-btn {
-    width: 2em;
-    height: 2em;
-    font-size: 1.5em;
+    width: 1.8em;
+    height: 1.8em;
+    font-size: 1.4em;
   }
 }
 
-/* Para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .main-nav {
-    padding: 16px;
+    padding: 12px;
   }
   
   .nav-left, .nav-right {
-    gap: 12px;
+    gap: 10px;
   }
   
   .brand {
-    font-size: 24px;
+    font-size: 20px;
   }
   
   .nav-link {
-    font-size: 14px;
-    padding: 10px 16px;
+    font-size: 12px;
+    padding: 8px 12px;
   }
   
   .user-id {
@@ -918,8 +897,8 @@
   }
   
   .profile-btn {
-    width: 1.8em;
-    height: 1.8em;
+    width: 1.6em;
+    height: 1.6em;
     font-size: 1.2em;
   }
 }
