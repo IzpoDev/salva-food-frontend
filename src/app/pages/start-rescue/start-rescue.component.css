@@ -1,0 +1,485 @@
+/* Estilos base SalvaFood */
+.bg-color-verde-sf {
+  background-color: #2C7865;
+}
+
+.text-color-verde-sf {
+  color: #2C7865;
+}
+
+.bg-logo {
+  background-image: url('../../assets/logo_solo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Contenedor principal */
+.rescue-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.rescue-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header de sección */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rescue-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2C7865;
+  margin: 0;
+}
+
+/* Sección de productos */
+.products-section {
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-rescue-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  border-left: 4px solid #2C7865;
+  transition: all 0.3s ease;
+}
+
+.product-rescue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(44, 120, 101, 0.15);
+}
+
+.product-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #2C7865;
+  flex-shrink: 0;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2C7865;
+  margin: 0 0 8px 0;
+}
+
+.product-prices {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.discount-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #dc2626;
+}
+
+.original-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.product-expiry {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+}
+
+.quantity-btn {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background: #2C7865;
+  color: white;
+  border-color: #2C7865;
+}
+
+.quantity {
+  font-weight: bold;
+  color: #2C7865;
+  min-width: 24px;
+  text-align: center;
+}
+
+.remove-product-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+
+.remove-product-btn:hover {
+  background: #fee2e2;
+  transform: scale(1.1);
+}
+
+/* Sección de resumen */
+.summary-section {
+  display: flex;
+  justify-content: center;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(44, 120, 101, 0.15);
+  border: 2px solid #2C7865;
+  min-width: 300px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.summary-row:last-of-type {
+  border-bottom: 2px solid #2C7865;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2C7865;
+}
+
+.pay-button {
+  width: 100%;
+  background: linear-gradient(135deg, #2C7865, #3a9b7a);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(44, 120, 101, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pay-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(44, 120, 101, 0.4);
+}
+
+.pay-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pay-btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pay-btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Modales */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-overlay.show .modal-content {
+  transform: scale(1);
+}
+
+/* Modal QR */
+.qr-modal {
+  border: 3px solid #2C7865;
+}
+
+.qr-header {
+  background: linear-gradient(135deg, #2C7865, #3a9b7a);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.qr-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.qr-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.qr-code {
+  background: white;
+  border: 2px solid #2C7865;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 20px auto;
+  width: fit-content;
+}
+
+.qr-squares {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  width: 140px;
+  height: 140px;
+}
+
+.qr-square {
+  background: white;
+  border: 1px solid #e5e7eb;
+  aspect-ratio: 1;
+}
+
+.qr-square.filled {
+  background: #2C7865;
+}
+
+.qr-amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2C7865;
+  margin-bottom: 10px;
+}
+
+.qr-instruction {
+  color: #6b7280;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Modal de éxito */
+.success-modal {
+  border: 3px solid #059669;
+}
+
+.success-header {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.success-header h3 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.success-code {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.success-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #374151;
+  margin: 0 0 25px 0;
+  line-height: 1.6;
+}
+
+.success-btn {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.success-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.4);
+}
+
+/* Imágenes de productos */
+.cocacola { background-image: url('../../assets/CocaCola.png'); }
+.fanta { background-image: url('../../assets/fanta-naranja-2.png'); }
+.yog { background-image: url('../../assets/yog.png'); }
+.pan { background-image: url('../../assets/pan.png'); }
+
+/* Badges de vencimiento */
+.bg-orange-500 { background-color: #f97316; color: white; }
+.bg-red-600 { background-color: #dc2626; color: white; }
+.bg-yellow-500 { background-color: #eab308; color: white; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rescue-container {
+    padding: 20px 10px;
+  }
+  
+  .rescue-title {
+    font-size: 24px;
+  }
+  
+  .product-rescue-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .product-actions {
+    margin-right: 0;
+  }
+  
+  .remove-product-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 10px;
+  }
+  
+  .summary-card {
+    min-width: auto;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-rescue-card {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.summary-card {
+  animation: fadeInUp 0.5s ease-out;
+}

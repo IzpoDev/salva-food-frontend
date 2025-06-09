@@ -1,0 +1,214 @@
+<!-- Header simplificado sin barra de búsqueda -->
+<header class="bg-white shadow-md sticky top-0 w-full z-50 py-9">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-4">
+    <!-- Logo izquierdo -->
+    <div class="flex items-center">
+      <div class="flex items-center gap-2">
+        <div class="relative w-16 h-16 bg-logo bg-cover bg-center rounded-full flex items-center justify-center text-white text-md"></div>
+        <a href="/home" (click)="goToHome()">
+          <span class="text-3xl font-bold">SalvaFood</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Información de usuario centrada -->
+    <div class="flex items-center gap-6">
+      <span class="text-xl font-semibold">Productos Salvados: 15</span>
+      <a href="/reward">
+          <span class="text-xl font-semibold">Puntos: 155c</span>
+      </a>
+      <span class="text-xl font-semibold">Izpo17</span>
+      <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+        <span class="text-gray-600 text-3xl">👤</span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Contenido principal -->
+<div class="rescue-container">
+  <div class="rescue-content">
+    <!-- Título -->
+    <div class="section-header">
+      <h1 class="rescue-title">Rescatando Productos</h1>
+    </div>
+    <div class="md:flex md:items-center md:justify-between gap-9 ">
+    <!-- Lista de productos -->
+        <div class="products-section">
+      <div class="product-grid">
+        <div *ngFor="let item of cartItems" class="product-rescue-card">
+          <!-- Imagen del producto -->
+          <div class="product-image-container">
+            <div class="product-image" [ngClass]="item.imageClass"></div>
+          </div>
+          
+          <!-- Detalles del producto -->
+          <div class="product-details">
+            <h3 class="product-name">{{ item.name }}</h3>
+            <div class="product-prices">
+              <span class="discount-price">{{ item.discountPrice }}</span>
+              <span class="original-price">{{ item.originalPrice }}</span>
+            </div>
+            <p class="product-expiry" [ngClass]="item.expiryBadgeClass">
+              {{ item.expiryText }}
+            </p>
+          </div>
+
+          <!-- Acciones -->
+          <div class="product-actions">
+            <button class="quantity-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+              </svg>
+            </button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Botón eliminar -->
+          <button class="remove-product-btn">
+            🗑️
+          </button>
+        </div>
+      </div>
+        </div>
+
+    <!-- Resumen de compra -->
+        <div class="summary-section">
+      <div class="summary-card">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>{{ subtotal }}</span>
+        </div>
+        <div class="summary-row">
+          <span>Total</span>
+          <span class="total-price">{{ subtotal }}</span>
+        </div>
+        
+        <!-- Botón de pagar -->
+        <button (click)="proceedToPay()" 
+                class="pay-button" 
+                [class.loading]="isProcessingPayment"
+                [disabled]="isProcessingPayment">
+          <span *ngIf="!isProcessingPayment" class="pay-btn-content">
+            💳 Pagar
+          </span>
+          <span *ngIf="isProcessingPayment" class="pay-btn-loading">
+            🔄 Procesando...
+          </span>
+        </button>
+      </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<!-- Modal QR -->
+<div class="modal-overlay" [class.show]="showQRModal" (click)="closeQRModal()">
+  <div class="modal-content qr-modal" (click)="$event.stopPropagation()">
+    <div class="qr-header">
+      <h3>Salva Pago</h3>
+    </div>
+    
+    <div class="qr-body">
+      <!-- QR Code simulado -->
+      <div class="qr-code">
+        <div class="qr-squares">
+          <!-- Patrón de QR simplificado -->
+          <div class="qr-row">
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+          </div>
+          <div class="qr-row">
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+          </div>
+          <div class="qr-row">
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+          </div>
+          <div class="qr-row">
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+          </div>
+          <div class="qr-row">
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square"></div>
+          </div>
+          <div class="qr-row">
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+          </div>
+          <div class="qr-row">
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+            <div class="qr-square"></div>
+            <div class="qr-square filled"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="qr-amount">{{ subtotal }}</div>
+      <p class="qr-instruction">Escaneando código QR...</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de éxito -->
+<div class="modal-overlay" [class.show]="showSuccessModal" (click)="closeSuccessModal()">
+  <div class="modal-content success-modal" (click)="$event.stopPropagation()">
+    <div class="success-header">
+      <div class="success-icon">✅</div>
+      <h3>Código Único</h3>
+      <p class="success-code">{{ uniqueCode }}</p>
+    </div>
+    
+    <div class="success-body">
+      <p class="success-message">
+        <strong>Termina el rescate en:</strong><br>
+        {{ pickupLocation }}
+      </p>
+      
+      <button (click)="closeSuccessModal()" class="success-btn">
+        Entendido
+      </button>
+    </div>
+  </div>
+</div>
