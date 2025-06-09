@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   
   ngOnInit(): void {
-    // Ejecuta la funcionalidad de búsqueda solo si estamos en el navegador
+    // Ejecuta la funcionalidad solo si estamos en el navegador
     if (isPlatformBrowser(this.platformId)) {
       this.initializeSearchFunctionality();
     }
@@ -20,70 +20,39 @@ export class HomeComponent implements OnInit {
   private initializeSearchFunctionality(): void {
     // Esperar a que el DOM esté completamente cargado
     setTimeout(() => {
-      const searchToggle = document.getElementById('searchToggle');
-      const searchBar = document.getElementById('searchBar');
-      const searchInput = searchBar?.querySelector('input');
+      const searchInput = document.querySelector('.search-bar-fixed input');
       const searchCategories = document.getElementById('searchCategories');
-      const body = document.body;
-
-      // Crear overlay para cuando se expande la búsqueda
-      const overlay = document.createElement('div');
-      overlay.className = 'search-overlay';
-      body.appendChild(overlay);
-
-      // Toggle barra de búsqueda
-      searchToggle?.addEventListener('click', (event) => {
-        // Prevenir que el evento se propague
-        event.stopPropagation();
-
-        if (searchBar?.classList.contains('hidden')) {
-          // Expandir
-          searchBar.classList.remove('hidden');
-          searchToggle.classList.add('active');
-          overlay.classList.add('active');
-          
-          setTimeout(() => {
-            searchBar.classList.add('expanded');
-            if (searchInput) {
-              searchInput.focus();
-            }
-          }, 10);
-        } else {
-          // Contraer
-          this.closeSearch(searchBar, searchToggle, searchCategories, overlay);
-        }
-      });
-
-      // Prevenir que los clics en la barra de búsqueda cierren la barra
-      searchBar?.addEventListener('click', (event) => {
-        event.stopPropagation();
-      });
-
-      // Mostrar categorías al hacer clic en el campo de búsqueda
+      
+      // Mostrar categorías con animación al hacer clic en el campo de búsqueda
       searchInput?.addEventListener('click', (event) => {
         event.stopPropagation();
         if (searchCategories) {
           searchCategories.classList.remove('hidden');
+          // Esperar un pequeño instante para que se aplique la transición correctamente
+          setTimeout(() => {
+            searchCategories.classList.add('visible');
+          }, 10);
         }
       });
-
-      // Prevenir que los clics en las categorías cierren la barra
+      
+      // Prevenir que los clics en las categorías cierren el menú
       searchCategories?.addEventListener('click', (event) => {
         event.stopPropagation();
       });
-
-      // Ocultar todo al hacer clic fuera
+      
+      // Ocultar categorías con animación al hacer clic fuera
       document.addEventListener('click', () => {
-        if (!searchBar?.classList.contains('hidden')) {
-          this.closeSearch(searchBar, searchToggle, searchCategories, overlay);
+        if (searchCategories && !searchCategories.classList.contains('hidden')) {
+          // Primero quitamos la visibilidad, manteniendo el elemento en el DOM
+          searchCategories.classList.remove('visible');
+          
+          // Después de la transición, ocultamos el elemento completamente
+          setTimeout(() => {
+            searchCategories.classList.add('hidden');
+          }, 300); // Coincidir con la duración de la transición
         }
       });
-
-      // También manejar el clic en el overlay
-      overlay.addEventListener('click', () => {
-        this.closeSearch(searchBar, searchToggle, searchCategories, overlay);
-      });
-
+      
       // Manejar el menú móvil
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');
       const mobileMenu = document.getElementById('mobileMenu');
@@ -92,26 +61,5 @@ export class HomeComponent implements OnInit {
         mobileMenu?.classList.toggle('hidden');
       });
     }, 100);
-  }
-
-  private closeSearch(
-    searchBar: HTMLElement | null, 
-    searchToggle: HTMLElement | null,
-    searchCategories: HTMLElement | null,
-    overlay: HTMLElement
-  ): void {
-    if (searchBar && searchToggle) {
-      searchBar.classList.remove('expanded');
-      searchToggle.classList.remove('active');
-      overlay.classList.remove('active');
-      
-      if (searchCategories) {
-        searchCategories.classList.add('hidden');
-      }
-      
-      setTimeout(() => {
-        searchBar.classList.add('hidden');
-      }, 300);
-    }
   }
 }

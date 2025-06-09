@@ -19,6 +19,11 @@
     background-size: 110%;
     background-repeat: no-repeat;
 }
+.bg-logo {
+  background-image: url('../../assets/logo_solo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .bg-color-verde-sf{
     background-color: #2C7865;
 }
@@ -33,4 +38,25 @@
 
 .tam-90 {
     height: 100vh;
+}
+
+.bg-fb{
+    background-image: url('../../assets/fb.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-ig{
+    background-image: url('../../assets/ig.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-tk{
+    background-image: url('../../assets/tk.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-yt{
+    background-image: url('../../assets/yt.png');
+    background-size: cover;
+    background-position: center;
 }

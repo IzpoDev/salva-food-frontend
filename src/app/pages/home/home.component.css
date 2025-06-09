@@ -2,7 +2,11 @@
 .bg-color-verde-sf {
   background-color: #2C7865;
 }
-
+.bg-logo {
+  background-image: url('../../assets/logo_solo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .product-card {
   transition: all 0.3s ease;
   border: 1px solid rgba(0,0,0,0.1);
@@ -33,35 +37,23 @@
 }
 /* ...existing code... */
 
-/* Estilos para la barra de búsqueda */
-.search-container {
-  position: relative;
-  transition: all 0.3s ease;
+/* Estilo para la barra de búsqueda fija */
+.search-bar-fixed {
+  max-width: 500px;
 }
 
-/* Estilo de la barra de búsqueda */
-.search-bar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
-  z-index: 100;
-  width: 0;
-}
-
-.search-bar.expanded {
-  width: 300px;
-}
-
-.search-bar input {
+.search-bar-fixed input {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
   width: 100%;
-  transition: opacity 0.3s ease;
-  opacity: 0;
+  transition: border-color 0.2s ease;
 }
 
-.search-bar.expanded input {
-  opacity: 1;
+.search-bar-fixed input:focus {
+  outline: none;
+  border-color: #2C7865;
+  box-shadow: 0 0 0 3px rgba(44, 120, 101, 0.1);
 }
 
 /* Estilo de las categorías de búsqueda */
@@ -103,7 +95,32 @@
 
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
-  .search-bar.expanded {
-    width: 250px;
+  .search-bar-fixed {
+    max-width: 100%;
+    margin: 0.5rem 0;
   }
+  
+  nav.max-w-6xl {
+    flex-direction: column;
+  }
+  
+  .hidden.md\:flex {
+    display: none;
+  }
+}
+/* Estilo mejorado para las categorías de búsqueda */
+.search-categories {
+  transition: all 0.3s ease;
+  z-index: 101;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  width: 100%; /* Para que coincida con el ancho de la barra de búsqueda */
+}
+
+/* Clase para cuando las categorías están visibles */
+.search-categories.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }

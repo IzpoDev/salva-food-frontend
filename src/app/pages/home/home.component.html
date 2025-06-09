@@ -1,26 +1,18 @@
 <!-- Header de navegación -->
-<header class="bg-white shadow-md sticky top-0 w-full z-50 py-8">
+<header class="bg-white shadow-md sticky top-0 w-full z-50 py-9">
   <nav class="max-w-6xl mx-auto flex items-center justify-between px-4">
-    <!-- Contenedor izquierdo: Lupa y Logo -->
+    <!-- Logo izquierdo -->
     <div class="flex items-center">
-      <!-- Botón de búsqueda (lupa) -->
-      <div class="search-container flex items-center">
-        <button id="searchToggle" class="search-toggle p-2 focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
-      </div>
-      
-      <!-- Logo y nombre (siempre visible) -->
-      <div class="flex items-center gap-2 ml-4">
-        <div class="w-8 h-8 bg-color-verde-sf rounded-full flex items-center justify-center text-white text-md">🌱</div>
-        <span class="text-2xl font-bold">SalvaFood</span>
+      <div class="flex items-center gap-2">
+        <div class="relative w-16 h-16 bg-logo bg-cover bg-center rounded-full flex items-center justify-center text-white text-md"></div>
+        <a href="/">
+          <span class="text-3xl font-bold">SalvaFood</span>
+        </a>
       </div>
     </div>
 
-    <!-- Barra de búsqueda expandible (posicionada absolutamente) -->
-    <div id="searchBar" class="search-bar hidden absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+    <!-- Barra de búsqueda fija en el centro -->
+    <div class="search-bar-fixed flex-1 mx-8 relative">
       <div class="relative">
         <input type="text" placeholder="Buscar para rescatar" class="py-2 pl-10 pr-3 border rounded-lg w-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -29,30 +21,47 @@
           </svg>
         </div>
       </div>
-    </div>
-
-    <!-- Categorías desplegables -->
-    <div id="searchCategories" class="search-categories hidden absolute top-16 left-1/2 transform -translate-x-1/2 bg-white border rounded-lg shadow-lg mt-1 w-64 z-50">
-      <ul class="py-2">
-        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Bebidas</li>
-        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Snacks</li>
-        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dulces</li>
-      </ul>
+      
+      <!-- Categorías desplegables con mejor animación -->
+      <div id="searchCategories" class="search-categories hidden absolute top-full left-0 mt-1 bg-white border rounded-lg shadow-lg w-full z-50">
+        <ul class="py-2">
+          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span>Bebidas</span>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span>Snacks</span>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span>Dulces</span>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- Información de usuario y puntos -->
     <div class="hidden md:flex items-center gap-4">
-      <span class="text-sm font-semibold">Productos Salvados: 15</span>
-      <span class="text-sm font-semibold">Puntos: 15Sc</span>
-      <span class="text-sm font-semibold">Izpo17</span>
-      <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-        <span class="text-gray-600 text-md">👤</span>
+      <span class="text-xl font-semibold">Productos Salvados: 15</span>
+      <a href="/reward">
+        <span class="text-xl font-semibold">Puntos: 20Sc</span>
+      </a>
+      <span class="text-xl font-semibold">Izpo17</span>
+      <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+        <span class="text-gray-600 text-md text-3xl">👤</span>
       </div>
     </div>
     
     <!-- Toggle menú mobile -->
     <button id="mobileMenuToggle" class="md:hidden focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
@@ -62,7 +71,9 @@
   <div id="mobileMenu" class="hidden px-4 py-2 md:hidden">
     <div class="flex flex-col space-y-3">
       <span class="text-sm font-semibold">Productos Salvados: 15</span>
-      <span class="text-sm font-semibold">Puntos: 15Sc</span>
+      <a href="/reward">
+        <span class="text-sm font-semibold">Puntos: 20Sc</span>
+      </a>
       <span class="text-sm font-semibold">Izpo17</span>
     </div>
   </div>
