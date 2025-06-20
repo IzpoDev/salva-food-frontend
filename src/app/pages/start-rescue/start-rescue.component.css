@@ -8,7 +8,7 @@
 }
 
 .bg-logo {
-  background-image: url('../../assets/logo_solo.png');
+  background-image: url('../../assets/logo_solo.webp');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -415,10 +415,10 @@
 }
 
 /* Imágenes de productos */
-.cocacola { background-image: url('../../assets/CocaCola.png'); }
-.fanta { background-image: url('../../assets/fanta-naranja-2.png'); }
-.yog { background-image: url('../../assets/yog.png'); }
-.pan { background-image: url('../../assets/pan.png'); }
+.cocacola { background-image: url('../../assets/CocaCola.webp'); }
+.fanta { background-image: url('../../assets/fanta-naranja-2.webp'); }
+.yog { background-image: url('../../assets/yog.webp'); }
+.pan { background-image: url('../../assets/pan.webp'); }
 
 /* Badges de vencimiento */
 .bg-orange-500 { background-color: #f97316; color: white; }
