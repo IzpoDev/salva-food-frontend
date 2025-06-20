@@ -1,26 +1,26 @@
 .fondo {
-    background-image: url('../../assets/fondo1.png');
+    background-image: url('../../assets/fondo1.webp');
 }
 .cocacola {
-    background-image: url('../../assets/CocaCola.png');
+    background-image: url('../../assets/CocaCola.webp');
     background-size: 50%;
     background-repeat: no-repeat;
 }
 .fanta {
-    background-image: url('../../assets/fanta-naranja-2.png');
+    background-image: url('../../assets/fanta-naranja-2.webp');
 }
 .yog{
-    background-image: url('../../assets/yog.png');
+    background-image: url('../../assets/yog.webp');
     background-size: 40%;
     background-repeat: no-repeat;
 }
 .pan {
-    background-image: url('../../assets/pan.png');
+    background-image: url('../../assets/pan.webp');
     background-size: 110%;
     background-repeat: no-repeat;
 }
 .bg-logo {
-  background-image: url('../../assets/logo_solo.png');
+  background-image: url('../../assets/logo_solo.webp');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -56,7 +56,7 @@
     background-position: center;
 }
 .bg-yt{
-    background-image: url('../../assets/yt.png');
+    background-image: url('../../assets/yt.webp');
     background-size: cover;
     background-position: center;
 }
