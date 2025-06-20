@@ -1,0 +1,146 @@
+.bg-logo {
+  background-image: url('../../assets/logo_solo.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-color-verde-sf {
+    background-color: #2C7865;
+}
+
+.color-verde-sf {
+    color: #2C7865;
+}
+
+.border-sf {
+    border-color: #2C7865;
+}
+
+/* Animaciones mejoradas */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.3s ease-in-out;
+}
+
+/* Efectos de hover y focus con colores de la startup */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(44, 120, 101, 0.2);
+    transform: translateY(-1px);
+    border-color: #2C7865 !important;
+}
+
+input:hover {
+    border-color: #2C7865;
+}
+
+/* Botón con colores de la startup */
+button:not(:disabled) {
+    background-color: #2C7865;
+}
+
+button:hover:not(:disabled) {
+    background-color: #1e5a4a;
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(44, 120, 101, 0.4);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.98);
+    background-color: #164037;
+}
+
+/* Estado de carga del botón */
+button.loading {
+    pointer-events: none;
+    background-color: #2C7865;
+}
+
+/* Focus ring para botón */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 120, 101, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .bg-white {
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    input {
+        padding: 1rem 1rem 1rem 2.5rem;
+    }
+    
+    button {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Estilos para validación con colores de la startup */
+.ng-valid.ng-touched {
+    border-color: #2C7865 !important;
+    box-shadow: 0 0 0 1px rgba(44, 120, 101, 0.3);
+}
+
+.ng-invalid.ng-touched {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.2);
+}
+
+/* Gradientes y sombras con colores de la startup */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(44, 120, 101, 0.15);
+}
+
+/* Efectos de entrada del formulario */
+form {
+    animation: fade-in 0.6s ease-in-out 0.3s both;
+}
+
+/* Hover en enlaces con colores de la startup */
+a:hover {
+    transform: translateX(2px);
+    transition: all 0.2s ease-in-out;
+    color: #1e5a4a !important;
+}
+
+/* Iconos en focus con colores de la startup */
+input:focus + .absolute svg {
+    color: #2C7865;
+}
+
+/* Ring focus personalizado */
+.focus-ring-sf:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 120, 101, 0.2);
+}
+
+/* Animación del spinner de carga con colores de la startup */
+.animate-spin {
+    border-color: rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+}
+
+/* Decoraciones con gradiente de la startup */
+.bg-gradient-sf {
+    background: linear-gradient(90deg, #2C7865 0%, #1e5a4a 100%);
+}
