@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-# Feedbackweb
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
-=======
 # SalvaFood
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
->>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
 
 ## Development server
 
@@ -44,11 +38,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Running unit tests
 
-<<<<<<< HEAD
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-=======
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
->>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
 
 ```bash
 ng test

@@ -8,13 +8,6 @@
       "node"
     ]
   },
-<<<<<<< HEAD
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "src/**/*.spec.ts"
-=======
   "files": [
     "src/main.ts",
     "src/main.server.ts",
@@ -22,6 +15,5 @@
   ],
   "include": [
     "src/**/*.d.ts"
->>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
   ]
 }
