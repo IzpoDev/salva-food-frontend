@@ -1,0 +1,156 @@
+<div class="rewards-container">
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="nav-left">
+      <button class="menu-btn" (click)="toggleMenu()">☰</button>
+      <div class="brand brand-container">
+        <a href="/home">
+          <div class="bg-logo bg-cover bg-center w-12 h-12 rounded-full flex items-center justify-center"></div>
+        </a>
+        <a href="/home">
+            <h1 class="">SalvaFood</h1>
+        </a>
+      </div>
+    </div>
+    <div class="nav-center">
+      <a href="/home" class="nav-link active text-4xl">Recompensas</a>
+      <a href="/rescue-history" class="nav-link text-4xl">Historial de rescate</a>
+      <a href="home" class="nav-link text-4xl">Inicio</a>
+    </div>
+    <div class="nav-right">
+      <span class="user-id">Izpo17</span>
+      <button class="profile-btn" (click)="toggleProfile()">👤</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <h2 class="section-title">Recompensas</h2>
+        
+        <div class="user-profile" [class.animate]="isAnimating">
+          <div class="profile-avatar">
+            <svg class="avatar-icon" viewBox="0 0 100 100">
+              <circle cx="50" cy="35" r="15" fill="none" stroke="#2C7865" stroke-width="2"/>
+              <path d="M25 75 Q25 60 50 60 Q75 60 75 75" fill="none" stroke="#2C7865" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <p><strong>Id:</strong> 16876516848</p>
+          <p><strong>Salvador:</strong> Izpo17</p>
+          <p><strong>Nivel Rescatador:</strong> Bronce</p>
+          <p><strong>Numero:</strong> 959638753</p>
+          <p><strong>Puntos:</strong> <span class="points" [class.pulse]="pointsAnimating">20c</span></p>
+        </div>
+      </div>
+
+      <!-- Center Panel -->
+      <div class="center-panel">
+        <div class="reward-card" [class.hover]="isCardHovered" (mouseenter)="onCardHover()" (mouseleave)="onCardLeave()" (click)="selectReward()">
+          <div class="card-icon">
+            <svg viewBox="0 0 60 60">
+              <line x1="15" y1="15" x2="45" y2="45" stroke="#2C7865" stroke-width="2"/>
+              <line x1="15" y1="45" x2="45" y2="15" stroke="#2C7865" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <p class="card-title">Vale de compra</p>
+            <p class="card-description">Salva 1 producto gratis</p>
+            <p class="card-price">Sc 20.00</p>
+          </div>
+          <button class="add-btn" [class.active]="isSelected">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right-panel">
+        <div class="cart-summary" [class.slide-in]="showCart">
+          <div class="cart-header">
+            <div class="cart-icon">
+              <svg viewBox="0 0 40 40">
+                <line x1="10" y1="10" x2="30" y2="30" stroke="#2C7865" stroke-width="2"/>
+                <line x1="10" y1="30" x2="30" y2="10" stroke="#2C7865" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="cart-details">
+              <p class="cart-title">Vale de compra</p>
+              <p class="cart-description">Salva 1 producto gratis</p>
+              <p class="cart-price">Sc 20.00</p>
+            </div>
+            <button class="cart-add-btn">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                <line x1="12" y1="8" x2="12" y2="16" stroke="white" stroke-width="2"/>
+                <line x1="8" y1="12" x2="16" y2="12" stroke="white" stroke-width="2"/>
+              </svg>
+            </button>
+            <button class="remove-btn" (click)="removeFromCart()">🗑</button>
+          </div>
+
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span>S/. 20.00</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span>S/. 20.00</span>
+            </div>
+            <button class="checkout-btn" [class.loading]="isCheckingOut" (click)="checkout()">
+              {{ isCheckingOut ? 'Procesando...' : 'Canjear' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de Éxito -->
+  <div class="modal-overlay" [class.show]="showModal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()" [class.show]="showModal">
+      <div class="modal-header">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#28a745"/>
+            <path d="m9 12 2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="modal-title">¡Éxito!</h3>
+        <button class="modal-close" (click)="closeModal()">×</button>
+      </div>
+      
+      <div class="modal-body">
+        <p class="modal-message">¡Recompensa canjeada exitosamente!</p>
+        <div class="modal-details">
+          <div class="detail-item">
+            <span class="detail-label">Recompensa:</span>
+            <span class="detail-value">Vale de compra</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Valor:</span>
+            <span class="detail-value">Sc 20.00</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Puntos utilizados:</span>
+            <span class="detail-value">20</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="modal-btn primary" (click)="closeModal()">Entendido</button>
+        <button class="modal-btn secondary" (click)="viewHistory()">Ver historial</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+.fondo {
+    background-image: url('../../assets/fondo1.webp');
+}
+.cocacola {
+    background-image: url('../../assets/CocaCola.webp');
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.fanta {
+    background-image: url('../../assets/fanta-naranja-2.webp');
+}
+.yog{
+    background-image: url('../../assets/yog.webp');
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+.pan {
+    background-image: url('../../assets/pan.webp');
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+.bg-logo {
+  background-image: url('../../assets/logo_solo.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.bg-color-verde-sf{
+    background-color: #2C7865;
+}
+
+.color-verde-sf{
+    color: #2C7865;
+}
+
+.tam-80 {
+    height: 100vh;
+}
+
+.tam-90 {
+    height: 100vh;
+}
+
+.bg-fb{
+    background-image: url('../../assets/fb.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-ig{
+    background-image: url('../../assets/ig.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-tk{
+    background-image: url('../../assets/tk.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-yt{
+    background-image: url('../../assets/yt.webp');
+    background-size: cover;
+    background-position: center;
+}

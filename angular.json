@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+<<<<<<< HEAD
   "cli": {
     "packageManager": "npm",
     "analytics": "40c043b3-cd5f-4769-8ba1-6786ff8315b1"
@@ -8,6 +9,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "feedbackweb": {
+=======
+  "newProjectRoot": "projects",
+  "projects": {
+    "salvaFood": {
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -15,6 +21,7 @@
       "prefix": "app",
       "architect": {
         "build": {
+<<<<<<< HEAD
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
@@ -23,11 +30,33 @@
               {
                 "glob": "**/*",
                 "input": "public"
+=======
+          "builder": "@angular-devkit/build-angular:application",
+          "options": { 
+            "outputPath": "dist/salva-food",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/"
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
               }
             ],
             "styles": [
               "src/styles.css"
             ],
+<<<<<<< HEAD
+=======
+            "scripts": [],
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -39,6 +68,7 @@
               "budgets": [
                 {
                   "type": "initial",
+<<<<<<< HEAD
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
                 },
@@ -46,6 +76,15 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
+=======
+                  "maximumWarning": "2MB",
+                  "maximumError": "5MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "500kB",
+                  "maximumError": "500kB"
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
                 }
               ],
               "outputHashing": "all"
@@ -59,6 +98,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+<<<<<<< HEAD
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
@@ -66,12 +106,49 @@
             },
             "development": {
               "buildTarget": "feedbackweb:build:development"
+=======
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "salvaFood:build:production"
+            },
+            "development": {
+              "buildTarget": "salvaFood:build:development"
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
             }
           },
           "defaultConfiguration": "development"
         },
+<<<<<<< HEAD
         "test": {
           "builder": "@angular/build:unit-test"
+=======
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
         }
       }
     }

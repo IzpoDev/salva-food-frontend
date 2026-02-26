@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+<<<<<<< HEAD
 
 export const routes: Routes = [
   { 
@@ -19,3 +20,16 @@ export const routes: Routes = [
     redirectTo: '' 
   }
 ];
+=======
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { HomeComponent } from './pages/home/home.component';
+import { RewardComponent } from './pages/reward/reward.component';
+import { StartRescueComponent } from './pages/start-rescue/start-rescue.component';
+
+export const routes: Routes = [
+ {path:'', component: LandingPageComponent},
+ {path:'home', component: HomeComponent},
+ {path:'reward', component: RewardComponent },
+ {path: 'start-rescue', component: StartRescueComponent}
+];
+>>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
