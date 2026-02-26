@@ -12,17 +12,10 @@
         "background": {
           "activeOnStart": true,
           "beginsPattern": {
-<<<<<<< HEAD
-            "regexp": "Changes detected"
-          },
-          "endsPattern": {
-            "regexp": "bundle generation (complete|failed)"
-=======
             "regexp": "(.*?)"
           },
           "endsPattern": {
             "regexp": "bundle generation complete"
->>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
           }
         }
       }
@@ -37,17 +30,10 @@
         "background": {
           "activeOnStart": true,
           "beginsPattern": {
-<<<<<<< HEAD
-            "regexp": "Changes detected"
-          },
-          "endsPattern": {
-            "regexp": "bundle generation (complete|failed)"
-=======
             "regexp": "(.*?)"
           },
           "endsPattern": {
             "regexp": "bundle generation complete"
->>>>>>> 6c955a422f619724b8234e1845b147a334a74b1e
           }
         }
       }
